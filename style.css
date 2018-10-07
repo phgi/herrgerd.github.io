@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.graphContainer{
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#legende {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: Gainsboro;
+  color: white;
+  padding-top: 0px;
+  min-height: 30px;
+  border-bottom: OrangeRed 2px solid;
+  text-transform: uppercase;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: OrangeRed;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 20px 0 0px;
+}
+
+header #branding {
+  float: left;
+}
+
+header nav {
+  margin-top: 32px;
+  float: right;
+}
+
+header .highlight, header .current a {
+  color: OrangeRed;
+  font-weight: bold;
+}
+
+footer {
+  background-color: Gainsboro;
+  color: white;
+  margin-top: 10px
+}

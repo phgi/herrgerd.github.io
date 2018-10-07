@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Beelogger Data</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	
-	<body>
-		<div class="nav">
-    		<ul>
-        		<li><a href="/">Home</a></li>
-        		<li><a href="/blog">Tech</a></li>
-				<li><a href="/about">About</a></li>
-    		</ul>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Beelogger DATA Analysis">
+	<meta name="keywords" content="Beelogger DATA Analysis">
+	<meta name="author" content="JGW https://hackaday.io/jgw">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Beelogger Data Analysis</title>
+	<script src="dygraph.js"></script>
+	<link rel="stylesheet" type="text/css" href="dygraph.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1><span class="highlight">BEE HIVE</span> data visualization</h1>
+			</div>
+			<nav>
+				<ul>
+					<li class="current"><a href="index.html">HOME</a></li>
+					<li><a href="">ABOUT</a></li>
+					<li><a href="https://hackaday.io/jgw">My HAD page</a></li>
+				</ul>
+			</nav>
 		</div>
-        		<h1>Data of a nuc bee hive located in western Germany</h1>
-				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</a></p>
-		<footer>
-    		<ul>
-        		<li><a href="https://hackaday.io/project/78326-power-beehive-sd-logger">&#181Power (beehive) SD logger</a></li>
-        		<li><a href="https://hackaday.io/projects/hacker/116766">hackaday.io</a></li>
-			</ul>
-		</footer>
-	</body>
-	
+
+	</header>
+
+	<div class="graphContainer">
+		<div id="graphdiv"> </div>
+		<script type="text/javascript">
+			g = new Dygraph(document.getElementById("graphdiv"),
+				"Complete_Data.csv", {
+					colors: ['#388e3c', '#607d8b', '#ff5722', '#ffc107 ', '#5c6bc0'],
+					visibility: [true, true, true, true, true, true],
+					width: 1200,
+					axisLabelFontSize: 12,
+					title: 'T and RH in a nuc bee hive',
+					titleHeight: 20,
+					xlabel: 'Date/Time',
+					xLabelHeight: 18,
+					ylabel: 'T(°C)',
+					yLabelWidth: 18,
+					labelsSeparateLines: true,
+					showRangeSelector: true,
+				}
+			);
+		</script>
+	</div>
+
+	<div id="legende">
+		<h3>Legende:
+	</div>
+
+	</div>
+
+
+	<footer>
+		<h3>nothing to see here yet...</h3>
+	</footer>
+
+
+</body>
+
 </html>

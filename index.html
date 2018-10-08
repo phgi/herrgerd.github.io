@@ -33,34 +33,6 @@
 
 	<div class="graphContainer">
 		<div id="graphDiv"> </div>
-		<script type="text/javascript">
-			var graphContainer = document.getElementsByClassName('graphContainer')[0];
-			var graphContainerWidth = graphContainer.clientWidth;
-			var legendeDiv = document.getElementById('legendeDiv');
-			
-			var graph = new Dygraph(document.getElementById("graphDiv"),
-				"Complete_Data.csv", {
-					colors: ['#388e3c', '#607d8b', '#ff5722', '#ffc107 ', '#5c6bc0'],
-					visibility: [true, true, true, true, true, true],
-					width: graphContainerWidth,
-					axisLabelFontSize: 12,
-					title: 'T and RH in a nuc bee hive',
-					titleHeight: 20,
-					xlabel: 'Date/Time',
-					xLabelHeight: 18,
-					ylabel: 'T(°C)',
-					yLabelWidth: 18,
-					labelsSeparateLines: true,
-					labelsDiv: legendeDiv,
-					showRangeSelector: true,
-				}
-			);
-
-			window.addEventListener('resize', function() {
-				graphContainerWidth = document.getElementsByClassName('graphContainer')[0].clientWidth;
-				graph.resize(graphContainerWidth, 320);
-			})
-		</script>
 	</div>
 
 	<div id="legendeContainer">
@@ -76,6 +48,39 @@
 		<h3>nothing to see here yet...</h3>
 	</footer>
 
+<script>
+
+function init() {
+	var graphContainer = document.getElementsByClassName('graphContainer')[0];
+	var graphContainerWidth = graphContainer.clientWidth;
+	var legendeDiv = document.getElementById('legendeDiv');
+
+	var graph = new Dygraph(document.getElementById("graphDiv"),
+		"Complete_Data.csv", {
+			colors: ['#388e3c', '#607d8b', '#ff5722', '#ffc107 ', '#5c6bc0'],
+			visibility: [true, true, true, true, true, true],
+			width: graphContainerWidth,
+			axisLabelFontSize: 12,
+			title: 'T and RH in a nuc bee hive',
+			titleHeight: 20,
+			xlabel: 'Date/Time',
+			xLabelHeight: 18,
+			ylabel: 'T(°C)',
+			yLabelWidth: 18,
+			labelsSeparateLines: true,
+			labelsDiv: legendeDiv,
+			showRangeSelector: true,
+		}
+	);
+
+	window.addEventListener('resize', function() {
+		graphContainerWidth = document.getElementsByClassName('graphContainer')[0].clientWidth;
+		graph.resize(graphContainerWidth, 320);
+	})
+}
+
+document.addEventListener("DOMContentLoaded", init);
+</script>
 
 </body>
 

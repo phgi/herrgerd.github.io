@@ -50,7 +50,7 @@
 
 <script>
 
-function init() {
+function initGraph() {
 	var graphContainer = document.getElementsByClassName('graphContainer')[0];
 	var graphContainerWidth = graphContainer.clientWidth;
 	var legendeDiv = document.getElementById('legendeDiv');
@@ -69,6 +69,7 @@ function init() {
 			yLabelWidth: 18,
 			labelsSeparateLines: true,
 			labelsDiv: legendeDiv,
+			legend: 'always',
 			showRangeSelector: true,
 		}
 	);
@@ -79,7 +80,7 @@ function init() {
 	})
 }
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", initGraph);
 </script>
 
 </body>
